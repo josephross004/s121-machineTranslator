@@ -21,6 +21,10 @@ def getTranslation(sender,data,user_data):
             url = 'https://www.wordreference.com/espt/' + word
         if lang1=="Portuguese" and lang2=="Spanish":
             url = 'https://www.wordreference.com/ptes/' + word
+        if lang1=="English" and lang2=="Portuguese":
+            url = "https://www.wordreference.com/enpt/" + word
+        if lang1=="Portuguese" and lang2=="English":
+            url = "https://www.wordreference.com/pten/" + word
         response = requests.get(url)
         print(response.status_code)
         with open('data.html','w', encoding="utf-8", errors="ignore") as f:
@@ -33,8 +37,8 @@ def getTranslation(sender,data,user_data):
 dpg.create_context()
 
 with dpg.window(tag="Primary Window"):
-    lister1 = dpg.add_listbox(label="Languages", items = language_list, num_items=2)
-    lister2 = dpg.add_listbox(label="Languages", items = language_list, num_items=2)
+    lister1 = dpg.add_listbox(label="Languages", items = language_list, num_items=4)
+    lister2 = dpg.add_listbox(label="Languages", items = language_list, num_items=4)
     inputtxt = dpg.add_input_text(label="Word", hint="Enter a word to translate...")
     text = dpg.add_text(word)
     translateButton = dpg.add_button(label="Translate", callback=getTranslation, user_data=[lister1, lister2, inputtxt,text])
