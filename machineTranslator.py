@@ -3,7 +3,7 @@ import json
 import dearpygui.dearpygui as dpg
 
 
-language_list = ["Spanish", "Portuguese"]
+language_list = ["Spanish", "Portuguese", "English"]
 word=""
 
 def getTranslation(sender,data,user_data):
@@ -12,33 +12,22 @@ def getTranslation(sender,data,user_data):
     word = dpg.get_value(user_data[2])
     if lang1==lang2:
         dpg.set_value(user_data[3], word)
-    if lang1=="Spanish" and lang2=="Portuguese":
-        url = 'https://www.wordreference.com/espt/' + word
+    else:
+        if lang1=="English" and lang2=="Spanish":
+            url = "https://www.wordreference.com/es/translation.asp?tranword=" + word
+        if lang1=="Spanish" and lang2=="English":
+            url = "https://www.wordreference.com/es/en/translation.asp?spen=" + word
+        if lang1=="Spanish" and lang2=="Portuguese":
+            url = 'https://www.wordreference.com/espt/' + word
+        if lang1=="Portuguese" and lang2=="Spanish":
+            url = 'https://www.wordreference.com/ptes/' + word
         response = requests.get(url)
         print(response.status_code)
-
         with open('data.html','w', encoding="utf-8", errors="ignore") as f:
             f.write(str(response.text))
             f.close()
-
-        #with open('data.html', 'r', encoding="utf-8", errors="ignore") as f:
-
         newText = response.text[response.text.find("<td class=\'ToWrd\' >")+19:response.text.find("<td class=\'ToWrd\' >")+40]
         word = newText[0:newText.find("<")]
-        dpg.set_value(user_data[3], word)
-    if lang1=="Portuguese" and lang2=="Spanish":
-        url = 'https://www.wordreference.com/ptes/' + word
-        response = requests.get(url)
-        print(response.status_code)
-
-        with open('data.html','w', encoding="utf-8", errors="ignore") as f:
-            f.write(str(response.text))
-            f.close()
-
-        #with open('data.html', 'r', encoding="utf-8", errors="ignore") as f:
-
-        newText = response.text[response.text.find("<td class=\'ToWrd\' >")+19:response.text.find("<td class=\'ToWrd\' >")+40]
-        word = newText[0:newText.find("<")-1]
         dpg.set_value(user_data[3], word)
 
 dpg.create_context()
