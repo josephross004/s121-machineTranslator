@@ -1,7 +1,10 @@
+from tkinter import W
 import requests
 import json
 import dearpygui.dearpygui as dpg
-
+import wordProcessing
+import re
+import unidecode
 
 language_list = ["Spanish", "Portuguese", "English"]
 word=""
@@ -13,26 +16,49 @@ def getTranslation(sender,data,user_data):
     if lang1==lang2:
         dpg.set_value(user_data[3], word)
     else:
-        if lang1=="English" and lang2=="Spanish":
-            url = "https://www.wordreference.com/es/translation.asp?tranword=" + word
-        if lang1=="Spanish" and lang2=="English":
-            url = "https://www.wordreference.com/es/en/translation.asp?spen=" + word
-        if lang1=="Spanish" and lang2=="Portuguese":
-            url = 'https://www.wordreference.com/espt/' + word
-        if lang1=="Portuguese" and lang2=="Spanish":
-            url = 'https://www.wordreference.com/ptes/' + word
-        if lang1=="English" and lang2=="Portuguese":
-            url = "https://www.wordreference.com/enpt/" + word
-        if lang1=="Portuguese" and lang2=="English":
-            url = "https://www.wordreference.com/pten/" + word
-        response = requests.get(url)
-        print(response.status_code)
-        with open('data.html','w', encoding="utf-8", errors="ignore") as f:
-            f.write(str(response.text))
-            f.close()
-        newText = response.text[response.text.find("<td class=\'ToWrd\' >")+19:response.text.find("<td class=\'ToWrd\' >")+40]
-        word = newText[0:newText.find("<")]
-        dpg.set_value(user_data[3], word)
+        sentence = ""
+        regexp = re.compile("[^a-zA-Z\d\s]")
+        s = wordProcessing.Sentence(word, lang1)
+        for w in s.parseText():
+            with open("data.html",'w') as file:
+                pass
+            if lang1=="English" and lang2=="Spanish":
+                url = "https://www.wordreference.com/es/translation.asp?tranword=" + w
+            if lang1=="Spanish" and lang2=="English":
+                url = "https://www.wordreference.com/es/en/translation.asp?spen=" + w
+            if lang1=="Spanish" and lang2=="Portuguese":
+                url = 'https://www.wordreference.com/espt/' + w
+            if lang1=="Portuguese" and lang2=="Spanish":
+                url = 'https://www.wordreference.com/ptes/' + w
+            if lang1=="English" and lang2=="Portuguese":
+                url = "https://www.wordreference.com/enpt/" + w
+            if lang1=="Portuguese" and lang2=="English":
+                url = "https://www.wordreference.com/pten/" + w
+            response = requests.get(url)
+            print("response code: " + str(response.status_code))
+            with open('data.html','w', encoding="utf-8", errors="ignore") as f:
+                f.write(str(response.text))
+                f.close()
+            newText = response.text[response.text.find("<td class=\'ToWrd\' >")+19:response.text.find("<td class=\'ToWrd\' >")+1000]
+            w = newText[0:newText.find("<")]
+            if regexp.search(w):
+                print("matched at index: " + str(regexp.search(w).start()))
+                newText = response.text[response.text.find("<td class=\'ToWrd\' >")+19:response.text.find("<td class=\'ToWrd\' >")+1000]
+                newText = newText[newText.find("<td class=\'ToWrd\' >")+19:newText.find("<td class=\'ToWrd\' >")+500]
+                w = newText[0:newText.find("<")]
+                try:
+                    unaccented_string = unidecode.unidecode(w)
+                    w = w[:regexp.search(unaccented_string).start()+1]
+                except AttributeError:
+                    w = " " + w
+                if w[len(w)-1] == "," or w[len(w)-1] == "/" or w[len(w)-1] == "\"":
+                    w = w[:len(w)-1]
+                if w[0] == " ":
+                    w = w[1:]
+            word1 = wordProcessing.Word(w,lang1)
+            sentence += word1.word
+            sentence += " "
+        dpg.set_value(user_data[3], sentence)
 
 dpg.create_context()
 
@@ -52,7 +78,7 @@ with dpg.font_registry():
         dpg.add_font_range(0x0300, 0x036F)
     dpg.bind_font(unifont)
 
-dpg.create_viewport(title='Speech Synthesis Suite', width=1000, height=600)
+dpg.create_viewport(title='Machine Translation Suite', width=1000, height=600)
 dpg.setup_dearpygui()
 dpg.show_viewport()
 dpg.set_primary_window("Primary Window", True)

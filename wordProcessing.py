@@ -16,7 +16,10 @@ class Sentence:
         if parsed[len(parsed)-1]=='':
             parsed.pop(len(parsed)-1)
         self.parsedText = parsed
-        print(self.parsedText)
+        return self.parsedText
 
-s = Sentence("english")
-s.parseText()
+class Word:
+
+    def __init__(self, word, language):
+        self.word = re.sub(r'(?:^[\s]+)|(?:[\s]+$)'.format(chars=re.escape("\s")), '', word)
+        self.language=language
