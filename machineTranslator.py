@@ -5,6 +5,7 @@ import dearpygui.dearpygui as dpg
 import wordProcessing
 import re
 import unidecode
+import bigram 
 
 language_list = ["Spanish", "Portuguese", "English"]
 word=""
@@ -56,8 +57,9 @@ def getTranslation(sender,data,user_data):
                 if w[0] == " ":
                     w = w[1:]
             word1 = wordProcessing.Word(w,lang1)
-            sentence += word1.word
+            sentence += word1.word + " "
             sentence += " "
+            sentence = bigram.mostLikelySentence(sentence)
         dpg.set_value(user_data[3], sentence)
 
 dpg.create_context()

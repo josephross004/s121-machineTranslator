@@ -1,4 +1,6 @@
+from numpy import double
 import wordProcessing
+import re
 
 def generateBigrams(filename="data.txt"):
     d = {}
@@ -7,7 +9,7 @@ def generateBigrams(filename="data.txt"):
     key = ""
     with open (filename, "r", encoding="utf-8") as f:
         for line in f:
-            l = wordProcessing.Sentence(line, "english")
+            l = wordProcessing.Sentence(line.lower(), "english")
             l.parseText()
             for i in l.parsedText:
                 if s1 == "":
@@ -31,7 +33,7 @@ def generateUnigrams(filename="data.txt"):
     key = ""
     with open (filename, "r", encoding="utf-8") as f:
         for line in f:
-            l = wordProcessing.Sentence(line, "english")
+            l = wordProcessing.Sentence(line.lower(), "english")
             l.parseText()
             for i in l.parsedText:
                 key = i
@@ -41,8 +43,8 @@ def generateUnigrams(filename="data.txt"):
                     d[key]=1
         return d
 
-def bigramProbabilityFunction(text, filename="bigrammodel.txt", textfile="data.txt"):
-    t = wordProcessing.Sentence(text, "english")
+def bigramProbabilityFunction(text, textfile="data.txt"):
+    t = wordProcessing.Sentence(text.lower(), "english")
     d = t.bigrams()
     pd = {}
     l = [k for k in d.keys()]
@@ -50,13 +52,34 @@ def bigramProbabilityFunction(text, filename="bigrammodel.txt", textfile="data.t
     ud = generateUnigrams(textfile)
     for bigram in d.keys():
         try:
-            u = ud[bigram[:bigram.find(",")-1]]
-            pd[bigram]=bd[bigram]/ud[bigram[:bigram.find(",")-1]]
+            s = (((bd[bigram])/(ud[bigram[:bigram.find(",")]])))
+            pd[bigram]=s
         except KeyError:
-            pd[bigram]=0
+            pd[bigram]=0.01
+    outputProb = 1
+    for key in pd.keys():
+        outputProb *= pd[key]
+    return outputProb
 
-    return pd
-
-print(generateBigrams())
-print(generateUnigrams())
-print(bigramProbabilityFunction("I have nothing to do"))
+def mostLikelySentence(text, textfile="data.txt"):
+    t = wordProcessing.Sentence(text.lower(),"english")
+    orders = t.orders()
+    d = {}
+    for txt in orders:
+        tx = str(txt)
+        tx = re.sub(",","",tx)
+        tx = re.sub("\(","",tx)
+        tx = re.sub("\)","",tx)
+        tx = re.sub("\'","",tx)
+        #print(tx + str(float(bigramProbabilityFunction(tx))))
+        d[tx] = float(bigramProbabilityFunction(tx))
+    max = ""
+    mP = 0
+    for key in d.keys():
+        if d[key] > mP:
+            mP = d[key]
+            max = key
+    return max
+#print(generateBigrams())
+#print(generateUnigrams())
+#print(bigramProbabilityFunction("nothing to do"))

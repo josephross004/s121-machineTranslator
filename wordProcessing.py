@@ -1,4 +1,5 @@
 import re
+import itertools
 
 class Sentence:
 
@@ -29,11 +30,13 @@ class Sentence:
                 d[key]=1
         return d
 
+    def orders(self):
+        self.parseText()
+        return(list(itertools.permutations(self.parsedText)))
+
+
 class Word:
 
     def __init__(self, word, language):
         self.word = re.sub(r'(?:^[\s]+)|(?:[\s]+$)'.format(chars=re.escape("\s")), '', word)
         self.language=language
-
-s = Sentence("hello world hello world hello world hello", "english")
-print(s.bigrams())
