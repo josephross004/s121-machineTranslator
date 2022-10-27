@@ -5,12 +5,11 @@
 <head>
     
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<title>roja - Diccionario Inglés-Español WordReference.com</title>
-<meta name="description" content="roja - Traduccion ingles de diccionario ingles">
+<title>gracioso - Diccionario Inglés-Español WordReference.com</title>
+<meta name="description" content="gracioso - Traduccion ingles de diccionario ingles">
 <meta http-equiv="Content-Language" content="es,en">
 <link title="WR Spanish-English" rel="search" type="application/opensearchdescription+xml" href="https://www.wordreference.com/home/OpenSearch?dict=esen">
 <meta name="google" content="notranslate">
-<link rel='canonical' href="//www.wordreference.com/es/en/translation.asp?spen=rojo">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4, minimum-scale=0.1, user-scalable=yes">
 <meta property="og:image" content="//www.wordreference.com/images/WR_fbicon_200x200.png" />
 
@@ -119,7 +118,7 @@
 
 <link rel="preload" as="image" href="/images/book.svg">
 
-<script type="text/javascript">var strOrig = "roja"; var strDic = "esen";</script>
+<script type="text/javascript">var strOrig = "gracioso"; var strDic = "esen";</script>
 
 <script>
     function check_webp_feature(feature, callback) {
@@ -455,6 +454,26 @@ tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:go
             googletag.pubads().addEventListener('slotRenderEnded', function(e) {
                 if (!e.isEmpty) {	// If the ad isn't empty
                     googletag.nAdsShown++;
+                    if (e.slot.getSlotElementId() == "mf320x50") {
+                        let adContainer = document.getElementById('mf320x50');
+                        let adElement = document.getElementById('mf320x50').childNodes[2];
+                        let closeBtn = document.getElementById("closeBotAd");
+                        //Add extra space when the mobile sticky add is displayed
+                        let extraSpace = document.createElement("div");
+                        extraSpace.id = "mobileExtraSpace";
+                        extraSpace.style.height = adElement.firstChild.offsetHeight + "px";
+                        document.getElementById("footer").appendChild(extraSpace);
+                        //adContainer.insertBefore(closeBtn, adElement);     //Move the close button before the ad's div
+                        //Give the adcontainer the exact height as the ad
+                        closeBtn.style.bottom = (adElement.firstChild.offsetHeight + 4) + "px";
+                        closeBtn.style.display = 'inline-flex';            //Show the close button
+                        closeBtn.addEventListener("click", () => {
+                            adContainer.remove();
+                            closeBtn.remove();
+                            extraSpace.remove();
+                        });
+
+                    }
                     consoleDebug(">> Slot rendered: ", e.slot.getSlotElementId(), e);
                 } else {
                     console.warn(">> Slot is empty: ", e.slot.getSlotElementId(), e);
@@ -964,7 +983,7 @@ tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:go
 
             <div id="nav" >
                     <a href="/es/en/translation.asp?spen="><span>Spanish-English</span> <span>Dictionary</span></a>
-| <a href=""><span>roja</span></a>            </div>
+| <a href=""><span>gracioso</span></a>            </div>
         </div>
     </header>
 
@@ -1082,27 +1101,27 @@ tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:go
     <li class="title1" title="See Also:">Ver También:</li>
 </ul>
 <ul>
-    <li id="link" ><ul><li><a href="/es/en/translation.asp?spen=Rodrigo">Rodrigo</a></li>
-<li><a href="/es/en/translation.asp?spen=rodrig%C3%B3n">rodrigón</a></li>
-<li><a href="/es/en/translation.asp?spen=Rodr%C3%ADguez">Rodríguez</a></li>
-<li><a href="/es/en/translation.asp?spen=roedor">roedor</a></li>
-<li><a href="/es/en/translation.asp?spen=roer">roer</a></li>
-<li><a href="/es/en/translation.asp?spen=rogaci%C3%B3n">rogación</a></li>
-<li><a href="/es/en/translation.asp?spen=rogar">rogar</a></li>
-<li><a href="/es/en/translation.asp?spen=rogativa">rogativa</a></li>
-<li><a href="/es/en/translation.asp?spen=rogatoria">rogatoria</a></li>
-<li><a href="/es/en/translation.asp?spen=rogatorio">rogatorio</a></li>
-<li><a href="/es/en/translation.asp?spen=rojear">rojear</a></li>
-<li><a href="/es/en/translation.asp?spen=rojeras">rojeras</a></li>
-<li><a href="/es/en/translation.asp?spen=rojete">rojete</a></li>
-<li><a href="/es/en/translation.asp?spen=rojez">rojez</a></li>
-<li><a href="/es/en/translation.asp?spen=rojigualdo">rojigualdo</a></li>
-<li><a href="/es/en/translation.asp?spen=rojillo">rojillo</a></li>
-<li><a href="/es/en/translation.asp?spen=rojizo">rojizo</a></li>
-<li><a href="/es/en/translation.asp?spen=rojo">rojo</a></li>
-<li><a href="/es/en/translation.asp?spen=rojura">rojura</a></li>
-<li><a href="/es/en/translation.asp?spen=rol">rol</a></li>
-<li><a href="/es/en/translation.asp?spen=rola">rola</a></li>
+    <li id="link" ><ul><li><a href="/es/en/translation.asp?spen=graciable">graciable</a></li>
+<li><a href="/es/en/translation.asp?spen=graciablemente">graciablemente</a></li>
+<li><a href="/es/en/translation.asp?spen=gracias">gracias</a></li>
+<li><a href="/es/en/translation.asp?spen=gracias%20a">gracias a</a></li>
+<li><a href="/es/en/translation.asp?spen=gracias%20a%20Dios">gracias a Dios</a></li>
+<li><a href="/es/en/translation.asp?spen=gracias%20de%20antemano">gracias de antemano</a></li>
+<li><a href="/es/en/translation.asp?spen=gr%C3%A1cil">grácil</a></li>
+<li><a href="/es/en/translation.asp?spen=gracilidad">gracilidad</a></li>
+<li><a href="/es/en/translation.asp?spen=graciosamente">graciosamente</a></li>
+<li><a href="/es/en/translation.asp?spen=graciosidad">graciosidad</a></li>
+<li><a href="/es/en/translation.asp?spen=gracioso">gracioso</a></li>
+<li><a href="/es/en/translation.asp?spen=grada">grada</a></li>
+<li><a href="/es/en/translation.asp?spen=gradaci%C3%B3n">gradación</a></li>
+<li><a href="/es/en/translation.asp?spen=gradar">gradar</a></li>
+<li><a href="/es/en/translation.asp?spen=grader%C3%ADa">gradería</a></li>
+<li><a href="/es/en/translation.asp?spen=grader%C3%ADo">graderío</a></li>
+<li><a href="/es/en/translation.asp?spen=gradiente">gradiente</a></li>
+<li><a href="/es/en/translation.asp?spen=grado">grado</a></li>
+<li><a href="/es/en/translation.asp?spen=graduable">graduable</a></li>
+<li><a href="/es/en/translation.asp?spen=graduaci%C3%B3n">graduación</a></li>
+<li><a href="/es/en/translation.asp?spen=graduado">graduado</a></li>
 </ul></li>
 </ul>
 
@@ -1137,23 +1156,47 @@ tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:go
 
         
 
-                    <h3 class="headerWord">roja</h3>
+                    <h3 class="headerWord">gracioso</h3>
                 
             <div id="footerlink"><a href="#footer">[links]</a></div>
                 
- 
+<div id='listen_widget'><span id='listen_txt' style='display: none;'>Escuchar:</span><input type='hidden' id='audT' value='3' /><script>var audioFiles = ['/audio/es/Mexico/es097531.mp3','/audio/es/Castellano/es097531.mp3','/audio/es/Argentina/es097531.mp3',];</script><span id='audiodrop'><select id='accentSelection'></select></span></div>
+<script type='text/javascript'>
+//Select Audio in local storage
+var audPref = localStorage['wr_audio-'+strDic.substr(0,2)];
+//Clear the cached selection
+var sel = document.getElementById('accentSelection')
+var audChoice = '<optgroup label="Accents"><option title="México pronunciation" value="0" >México</option><option title="Spain pronunciation" value="1" >España</option><option title="Argentina pronunciation" value="2" >Argentina</option></optgroup><optgroup label="Playback rate"><option title="Speed at 100%" value="%100">100%</option><option title="Speed at 75%" value="%75">75%</option><option title="Speed at 50%" value="%50">50%</option></optgroup>';
+audChoice = audChoice.replace(/ selected=["']selected["']/gm, '');var audT = document.getElementById('audT');if ((audT) && (audPref)) {
+		//Parse the content
+		if(audPref.indexOf(':') > -1) {
+			var audPrefAccent = audPref.split(':')[0];
+			var playbackRate = audPref.split(':')[1];
+		} else {
+			var audPrefAccent = audPref;
+			var playbackRate = 1;
+		}
+		var re = new RegExp('(<option[^>]+)(>' + audPrefAccent + '<\/option>)','gm');		audChoice = audChoice.replace(re, "$1 selected='selected'$2");
+}
+sel.innerHTML = audChoice;
+var isIE11 = (!!window.MSInputMethodContext && !!document.documentMode)
+document.getElementById('listen_txt').style.display = 'inline';
+if(isIE11)
+	document.getElementById('listen_widget').style.display = 'none';
+</script>
+<div id='dummyspan'></div><br /> 
 
 
             <div id="forumNotes"><a id="forumNotesLink">ⓘ One or more forum threads is an exact match of your searched term</a></div>
             <div id="WHlinks" style="padding-top: 8px;">
         
 
-                    <a href="/definicion/roja">Spanish definition</a> |
-                    <a href="/sinonimos/roja">Spanish synonyms</a> |
-                    <a href="/gramatica/roja">Gramática </a> |
+                    <a href="/definicion/gracioso">Spanish definition</a> |
+                    <a href="/sinonimos/gracioso">Spanish synonyms</a> |
+                    <a href="/gramatica/gracioso">Gramática </a> |
                     <a href='/conj/esverbs.aspx' title='conjugate Spanish verbs' rel='nofollow'>Conjugación&nbsp;<span style='font-size:smaller'>[ES]</span></a> | <a href='/conj/enverbs.aspx' title='conjugate English verbs'>Conjugator&nbsp;<span style='font-size:smaller'>[EN]</span></a> |
-                    <a href='https://www.google.es/search?tbm=nws&amp;lr=lang_es&amp;q=%22roja%22' target=gg>in context</a> |
-                    <a href='https://www.google.es/search?tbm=isch&amp;safe=active&amp;q=%22roja%22' target=gg>images</a>
+                    <a href='https://www.google.es/search?tbm=nws&amp;lr=lang_es&amp;q=%22gracioso%22' target=gg>in context</a> |
+                    <a href='https://www.google.es/search?tbm=isch&amp;safe=active&amp;q=%22gracioso%22' target=gg>images</a>
                                     <span id='WHlinks_forMobile'>
                         <a href='/tools/Tools.aspx#mobileapps'>WR Apps: Android & iPhone</a>
                     <a href='https://daily.wordreference.com/'>Word of the day</a>
@@ -1168,7 +1211,7 @@ tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:go
             <div class="inflectionsSection">
                 
 
-        <strong>Inflexiones</strong> de '<strong>rojo</strong>' (<span class='POS2'>nm, nf</span>): <span class='POS2'> f</span>: roja, <span class='POS2'> mpl</span>: rojos, <span class='POS2'> fpl</span>: rojas<br>Cuando se refiere a personas.<br><strong>Inflexiones</strong> de '<strong>rojo</strong>' (<span class='POS2'>adj</span>): <span class='POS2'> f</span>: roja, <span class='POS2'> mpl</span>: rojos, <span class='POS2'> fpl</span>: rojas<br>
+        <strong>Inflexiones</strong> de '<strong>gracioso</strong>' (<span class='POS2'>nm, nf</span>): <span class='POS2'> f</span>: graciosa, <span class='POS2'> mpl</span>: graciosos, <span class='POS2'> fpl</span>: graciosas<br><strong>Inflexiones</strong> de '<strong>gracioso</strong>' (<span class='POS2'>adj</span>): <span class='POS2'> f</span>: graciosa, <span class='POS2'> mpl</span>: graciosos, <span class='POS2'> fpl</span>: graciosas<br>
     
                 
 
@@ -1185,8 +1228,11 @@ tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:go
                     <li id="tabWR" class="selected">
                             <span>WordReference</span>
                     </li>
+                    <li id="tabHC" class="">
+                        <span>Collins</span>
+                    </li>
                     <li id="tabRev" class="">
-                        <a href = "/esen/reverse/roja" title="Translations to 'roja' on the other side of this WordReference dictionary.">WR Reverse (58)</a>
+                        <a href = "/esen/reverse/gracioso" title="Translations to 'gracioso' on the other side of this WordReference dictionary.">WR Reverse (28)</a>
                     </li>
             </ul>
         </div>
@@ -1203,9 +1249,9 @@ tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:go
         <script>
             function loadCollinsJS() {
                 var oTabHC = document.getElementById('tabHC')
-                var sWord = 'roja', sDic = 'esen', getCollins = document.createElement("script");
+                var sWord = 'gracioso', sDic = 'esen', getCollins = document.createElement("script");
                 getCollins.type = "text/javascript";
-                getCollins.src = "/dictionary/getCollins/esen/roja";
+                getCollins.src = "/dictionary/getCollins/esen/gracioso";
                 getCollins.onload = function () {
                     oTabHC.className = 'selected';
                 };
@@ -1215,74 +1261,44 @@ tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:go
         </script>
    
 <!-- articleWRD -->
-                        <div id='articleWRD'><div class='inAltTermOnly tooltip'>'roja' tiene referencia cruzada con 'rojo'. Se encuentra en una o más de las líneas abajo.<span>'roja' is cross-referenced with 'rojo'. It is in one or more of the lines below.</span></div><!-- copyright 2 --><div><p class='wrcopyright'><a name="rojo114"></a><span dir='auto'>WordReference English-<span class='ph' data-ph='sLanguage'>Spanish</span> Dictionary © 2022:</span></p></div><table class='WRD' onclick='redirectWR(event,"WResen")'><tr class='wrtopsection'><td colspan='3' title='Principal Translations'><strong><span class='ph' data-ph='sMainMeanings'>Principal Translations</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'><span class='ph' data-ph='sLang_es'>Spanish</span></td><td></td><td class='ToWrd'><span class='ph' data-ph='sLang_en'>English</span></td></tr>
-<tr class='even' id='esen:3202861'><td class='FrWrd'><strong>rojo</strong> <em class='POS2' data-lang='es'>nm</em></td><td> (color de la sangre)</td><td class='ToWrd' >red <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>El rojo del sofá contrasta con el azul de la pared.</span></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>The red of the sofa is in contrast to the blue of the wall.</i></span></td></tr>
-<tr class='odd' id='esen:39974'><td class='FrWrd'><strong>rojo</strong> <em class='POS2' data-lang='es'>adj</em></td><td> (del color de la sangre)</td><td class='ToWrd' >red <em class='POS2' data-lang='en'>adj</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>A Fernanda le encantan las rosas rojas.</span></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>Fernanda loves red roses.</i></span></td></tr>
+                        <div id='articleWRD'><!-- copyright 2 --><div><p class='wrcopyright'><a name="gracioso103"></a><span dir='auto'>WordReference English-<span class='ph' data-ph='sLanguage'>Spanish</span> Dictionary © 2022:</span></p></div><table class='WRD' onclick='redirectWR(event,"WResen")'><tr class='wrtopsection'><td colspan='3' title='Principal Translations'><strong><span class='ph' data-ph='sMainMeanings'>Principal Translations</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'><span class='ph' data-ph='sLang_es'>Spanish</span></td><td></td><td class='ToWrd'><span class='ph' data-ph='sLang_en'>English</span></td></tr>
+<tr class='even' id='esen:8964'><td class='FrWrd'><strong>gracioso</strong> <em class='POS2' data-lang='es'>adj</em></td><td> (que causa risa)</td><td class='ToWrd' >funny <em class='POS2' data-lang='en'>adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >amusing <em class='POS2' data-lang='en'>adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>El jefe contó un chiste muy gracioso.</span></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>The boss cracked a really funny joke.</i></span></td></tr>
+<tr class='odd' id='esen:8965'><td class='FrWrd'><strong>gracioso</strong> <em class='POS2' data-lang='es'>adj</em></td><td> (agradable a la vista)</td><td class='ToWrd' >attractive, elegant <em class='POS2' data-lang='en'>adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >cute <em class='POS2' data-lang='en'>adj</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>El potrillo se alejó con su gracioso trote.</span></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>The colt headed into the distance with an elegant trot.</i></span></td></tr>
 </table><table class='WRreporterror'>
 <tr class='odd more'><td>&nbsp;</td>
-<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="https://forum.wordreference.com/forums/dictionary-error-reports-and-suggestions.30/post-thread?prefix_id=1&title=rojo"><span class='ph' data-ph='sReportError'>Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
+<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="https://forum.wordreference.com/forums/dictionary-error-reports-and-suggestions.30/post-thread?prefix_id=1&title=gracioso"><span class='ph' data-ph='sReportError'>Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
 <table class='WRD' onclick='redirectWR(event,"WResen")'><tr class='wrtopsection'><td colspan='3' title='Additional Translations' class='additional'><strong><span class='ph' data-ph='sAddTrans'>Additional Translations</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'><span class='ph' data-ph='sLang_es'>Spanish</span></td><td></td><td class='ToWrd'><span class='ph' data-ph='sLang_en'>English</span></td></tr>
-<tr class='even' id='esen:3202862'><td class='FrWrd'><strong>rojo</strong> <em class='POS2' data-lang='es'>adj</em></td><td> <i class='Fr2'>coloquial</i> (de izquierdas)&nbsp;<span class='dsense' >(<i>colloquial</i>)</span></td><td class='ToWrd' >commie <em class='POS2' data-lang='en'>adj</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >red <em class='POS2' data-lang='en'>adj</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Los políticos rojos fueron víctimas de persecuciones durante el siglo pasado.</span></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>Commie politicians were victims of persecution last century.</i></span></td></tr>
-<tr class='odd' id='esen:39975'><td class='FrWrd'><strong>rojo,<br> roja</strong> <em class='POS2' data-lang='es'>nm, nf</em></td><td> <i class='Fr2'>coloquial</i> (persona de izquierdas)&nbsp;<span class='dsense' >(<i>politics</i>)</span></td><td class='ToWrd' >red <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Mi cuñado es un rojo: tiene ideas muy liberales y socialistas.</span></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>That man is red, he's got very liberal and socialist ideas.</i></span></td></tr>
+<tr class='even' id='esen:8966'><td class='FrWrd'><strong>gracioso,<br> graciosa</strong> <em class='POS2' data-lang='es'>nm, nf</em></td><td> (personaje chistoso)</td><td class='ToWrd' >clown, fool, joker <em class='POS2' data-lang='en'>n</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Este actor bordó el papel de gracioso en la comedia.</span></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>The actor nailed the role of the fool (<i>or: </i> joker) in the comedy.</i></span></td></tr>
+<tr class='odd' id='esen:3200944'><td class='FrWrd'><strong>gracioso,<br> graciosa</strong> <em class='POS2' data-lang='es'>nm, nf</em></td><td> <i class='Fr2'>irónico</i> (persona fastidiosa)</td><td class='ToWrd' >wiseguy, wisecrack <em class='POS2' data-lang='en'>n</em></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Algún gracioso estacionó su auto en nuestro jardín.</span></td></tr>
+<tr class='odd'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>Some wiseguy parked his car in our garden.</i></span></td></tr>
+<tr class='even' id='esen:8967'><td class='FrWrd'><strong>gracioso</strong> <em class='POS2' data-lang='es'>adj</em></td><td> <i class='Fr2'>formal</i> (que se concede sin méritos)</td><td class='ToWrd' >benevolent <em class='POS2' data-lang='en'>adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >goodwill <em class='POS2' data-lang='en'>adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >free <em class='POS2' data-lang='en'>adj</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Con la nueva directora, los favores graciosos son cosa del pasado.</span></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>With the new director, benevolent favors are a thing of the past,</i></span></td></tr>
 </table>
 <table class='WRreporterror'>
-<tr class='even more'><td>&nbsp;</td>
-<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="https://forum.wordreference.com/forums/dictionary-error-reports-and-suggestions.30/post-thread?prefix_id=1&title=rojo"><span class='ph' data-ph='sReportError'>Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
+<tr class='odd more'><td>&nbsp;</td>
+<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="https://forum.wordreference.com/forums/dictionary-error-reports-and-suggestions.30/post-thread?prefix_id=1&title=gracioso"><span class='ph' data-ph='sReportError'>Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
 
-<!-- copyright 5 --><div><p class='wrcopyright'><a name="rojo114"></a><span dir='auto'>WordReference English-<span class="ph" data-ph="sLanguage">Spanish</span> Dictionary © 2022:</span></p></div><table class='WRD' id='compound_forms' onclick='redirectWR(event,"WResen")'><tr class='wrtopsection'><td colspan='3' title='Compound Forms' id='compounds'><strong><span class="ph" data-ph="sCmpdForms">Compound Forms:</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'><span class="ph" data-ph="sLang_es">Spanish</span></td><td></td><td class='ToWrd'><span class="ph" data-ph="sLang_en">English</span></td></tr>
-<tr class='even' id='esen:3170207'><td class='FrWrd'><strong>ácaro rojo,<br> coruco,<br> piojo rojo</strong> <em class='POS2' data-lang='es'>grupo nom</em></td><td> (parásito de aves)</td><td class='ToWrd' >red mite <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>El ácaro rojo afecta el bienestar de las gallinas.</span></td></tr>
-<tr class='odd' id='esen:45057'><td class='FrWrd'><strong>al rojo vivo</strong> <em class='POS2' data-lang='es'>loc adv</em></td><td> (candente)</td><td class='ToWrd' >red hot <em class='POS2' data-lang='en'>expr</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Los herreros trabajan con metales al rojo vivo y deben ser muy cuidadosos.</span></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>Blacksmiths work with red hot metal and should be very careful.</i></span></td></tr>
-<tr class='even' id='esen:30484'><td class='FrWrd'><strong>farolillo rojo</strong> <em class='POS2' data-lang='es'>nm</em></td><td> <i class='Fr2'>coloquial</i> (último clasificado)</td><td class='ToWrd' >last-place competitor <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>colloquial, rugby</i>)</span></td><td class='ToWrd' >wooden spoon <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>footrace</i>)</span></td><td class='ToWrd' >last runner <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>Tour de France</i>)</span></td><td class='ToWrd' >Lanterne Rouge <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>El farolillo rojo de la Vuelta a España es un alemán.</span></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>The last-place competitor in the Tour of Spain is a German.</i></span></td></tr>
-<tr class='odd' id='esen:3019226'><td class='FrWrd'><strong>poner rojo</strong> <em class='POS2' data-lang='es'>loc verb</em></td><td> (enrojecer, sonrojar)</td><td class='ToWrd' >make <span title='somebody'>[sb]</span> blush <em class='POS2' data-lang='en'>v expr</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Lo pusieron rojo con tantos halagos.</span></td></tr>
-<tr class='even' id='esen:3019251'><td class='FrWrd'><strong>ponerse rojo</strong> <em class='POS2' data-lang='es'>loc verb</em></td><td> (ruborizarse)</td><td class='ToWrd' >blush<a title="conjugate blush" class='conjugate' href="/conj/enverbs.aspx?v=blush">⇒</a> <em class='POS2' data-lang='en'>vi</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >go red, go as red as a beetroot <em class='POS2' data-lang='en'>v expr</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Cuando le aplaudieron, el estudiante se puso rojo.</span></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>When they applauded him, the student blushed.</i></span></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>When they applauded him, the student went red.</i></span></td></tr>
-<tr class='odd' id='esen:3019429'><td class='FrWrd'><strong>precipitado rojo</strong> <em class='POS2' data-lang='es'>nm</em></td><td> (polvo cristalino)</td><td class='ToWrd' >red precipitate <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='odd' style='border: 1px solid black'><td colspan='3' class='notePubl' ><i><span class="ph" data-ph="sNote">Note</span></i>: Deutóxido de mercurio.</td></tr><tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>El precipitado rojo tiene un color rojo muy intenso.</span></td></tr>
-<tr class='even' id='esen:39976'><td class='FrWrd'><strong>rojo de vergüenza</strong> <em class='POS2' data-lang='es'>loc adj</em></td><td> (con mucha vergüenza)</td><td class='ToWrd' >red with embarrassment <em class='POS2' data-lang='en'>adj</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td>&nbsp;</td><td class='ToWrd' >blushing <em class='POS2' data-lang='en'>adj</em></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Cuando se me rompió el pantalón, me puse rojo de vergüenza.</span></td></tr>
-<tr class='odd' id='esen:58394'><td class='FrWrd'><strong>rojo pasión</strong> <em class='POS2' data-lang='es'>loc nom m</em></td><td> (rojo fuerte)</td><td class='ToWrd' >flaming red <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Lucila se pintó los labios de rojo pasión.</span></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>Lucia painted her lips flaming red.</i></span></td></tr>
-<tr class='even' id='esen:16383'><td class='FrWrd'><strong>salmón rojo</strong> <em class='POS2' data-lang='es'>nm + adj</em></td><td> (pez salmónido)</td><td class='ToWrd' >sockeye salmon <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='even' style='border: 1px solid black'><td colspan='3' class='notePubl' ><i><span class="ph" data-ph="sNote">Note</span></i>: Oncorhynchus nerka.</td></tr><tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>El salmón rojo habita los mares de Japón.</span></td></tr>
-<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i><span class='tooltip'><b>ⓘ</b><span>Esta oración no es una traducción de la original.</span></span> Sockeye salmon are known to weigh as much as 7 kg and grow to almost 84 cm in length.</i></span></td></tr>
-<tr class='odd' id='esen:3019825'><td class='FrWrd'><strong>sándalo rojo</strong> <em class='POS2' data-lang='es'>nm</em></td><td> (árbol de Asia)</td><td class='ToWrd' >red sandalwood <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>El sándalo rojo se usa como colorante.</span></td></tr>
-<tr class='even' id='esen:60223'><td class='FrWrd'><strong>té rojo</strong> <em class='POS2' data-lang='es'>grupo nom</em></td><td> (tipo de bebida)</td><td class='ToWrd' >red tea <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='odd' id='esen:62070'><td class='FrWrd'><strong>tú de rojo y yo con este antojo</strong> <em class='POS2' data-lang='es'>expr</em></td><td> <i class='Fr2'>coloquial</i> (para piropear)&nbsp;<span class='dsense' >(<i>sexual</i>)</span></td><td class='ToWrd' >you make my mouth water, you are very attractive <em class='POS2' data-lang='en'>expr</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>literal</i>)</span></td><td class='ToWrd' >you in red and I with this craving <em class='POS2' data-lang='en'>expr</em></td></tr>
-<tr class='even' id='esen:63347'><td class='FrWrd'><strong>vino rojo,<br> vino tinto</strong> <em class='POS2' data-lang='es'>loc nom m</em></td><td> (de color granate)</td><td class='ToWrd' >red wine <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='odd' id='esen:63349'><td class='FrWrd'><strong>vino tinto,<br> vino rojo</strong> <em class='POS2' data-lang='es'>nm + adj</em></td><td> (vino de color granate)</td><td class='ToWrd' >red wine <em class='POS2' data-lang='en'>n</em></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>El vino tinto de Argentina es muy rico.</span></td></tr>
-<tr class='odd'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>Red wine from Argentina is very good.</i></span></td></tr>
-<tr class='even' id='esen:63369'><td class='FrWrd'><strong>virado al rojo</strong> <em class='POS2' data-lang='es'>loc adj</em></td><td> (tono: rojizo)</td><td class='ToWrd' >reddish <em class='POS2' data-lang='en'>adj</em></td></tr>
-<tr class='odd' id='esen:3164781'><td class='FrWrd'><strong>virado al rojo</strong> <em class='POS2' data-lang='es'>loc adj</em></td><td> <i class='Fr2'>figurado</i> (con pérdidas)</td><td class='ToWrd' >in the red <em class='POS2' data-lang='en'>expr</em></td></tr>
+<!-- copyright 5 --><div><p class='wrcopyright'><a name="gracioso103"></a><span dir='auto'>WordReference English-<span class="ph" data-ph="sLanguage">Spanish</span> Dictionary © 2022:</span></p></div><table class='WRD' id='compound_forms' onclick='redirectWR(event,"WResen")'><tr class='wrtopsection'><td colspan='3' title='Compound Forms' id='compounds'><strong><span class="ph" data-ph="sCmpdForms">Compound Forms:</span></strong></td></tr><tr class='langHeader' style='font-size: 13px;text-decoration: underline;font-weight:bold;'><td class='FrWrd'><span class="ph" data-ph="sLang_es">Spanish</span></td><td></td><td class='ToWrd'><span class="ph" data-ph="sLang_en">English</span></td></tr>
+<tr class='even' id='esen:53378'><td class='FrWrd'><strong>hacerse el gracioso</strong> <em class='POS2' data-lang='es'>loc verb</em></td><td> (payasear)&nbsp;<span class='dsense' >(<i>formal</i>)</span></td><td class='ToWrd' >play the fool, play the clown <em class='POS2' data-lang='en'>v expr</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td class='To2'>&nbsp;<span class='dsense'>(<i>informal</i>)</span></td><td class='ToWrd' >clown around, mess around <em class='POS2' data-lang='en'>v expr</em></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='FrEx'><span dir='ltr'>Pedro siempre se hace el gracioso.</span></td></tr>
+<tr class='even'><td>&nbsp;</td><td colspan='2' class='ToEx'><span dir='ltr'><i>Pedro always plays the fool (<i>or: </i> plays the clown).</i></span></td></tr>
 </table>
 <table class='WRreporterror'>
-<tr class='even more'><td>&nbsp;</td>
-<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="https://forum.wordreference.com/forums/dictionary-error-reports-and-suggestions.30/post-thread?prefix_id=1&title=rojo"><span class="ph" data-ph="sReportError">Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
+<tr class='odd more'><td>&nbsp;</td>
+<td style='text-align:right;'><a target='WRsug' title='Is something important missing? Report an error or suggest an improvement.' href="https://forum.wordreference.com/forums/dictionary-error-reports-and-suggestions.30/post-thread?prefix_id=1&title=gracioso"><span class="ph" data-ph="sReportError">Is something important missing? Report an error or suggest an improvement.</span></a></td></tr></table>
 
 </div><div id='collinsdiv'></div>
 
@@ -1300,76 +1316,67 @@ tr.even:hover, tr.odd:hover, tr.evenEx:hover, tr.oddEx:hover{background-color:go
 
             </div>
                     
-<div id='FTintro'><div class='entrySeparator'></div>'<b>roja</b>' aparece también en las siguientes entradas:
+<div id='FTintro'><div class='entrySeparator'></div>'<b>gracioso</b>' aparece también en las siguientes entradas:
 </div>
 <div class='FTsource'>In the Spanish description:</div><div class='FTlist'>
-<a href="/es/en/translation.asp?spen=bock">bock</a>
- - <a href="/es/en/translation.asp?spen=b%C3%BAcaro">b&#250;caro</a>
- - <a href="/es/en/translation.asp?spen=c%C3%A1lido">c&#225;lido</a>
- - <a href="/es/en/translation.asp?spen=carmes%C3%AD">carmes&#237;</a>
- - <a href="/es/en/translation.asp?spen=chapeta">chapeta</a>
- - <a href="/es/en/translation.asp?spen=chupet%C3%B3n">chupet&#243;n</a>
- - <a href="/es/en/translation.asp?spen=colirrojo">colirrojo</a>
- - <a href="/es/en/translation.asp?spen=encausto">encausto</a>
- - <a href="/es/en/translation.asp?spen=florescencia">florescencia</a>
- - <a href="/es/en/translation.asp?spen=miaja">miaja</a>
- - <a href="/es/en/translation.asp?spen=mojarse%20un%20sem%C3%A1foro">mojarse un sem&#225;foro</a>
- - <a href="/es/en/translation.asp?spen=viuda%20negra">viuda negra</a>
+<a href="/es/en/translation.asp?spen=agraciado">agraciado</a>
+ - <a href="/es/en/translation.asp?spen=canoro">canoro</a>
+ - <a href="/es/en/translation.asp?spen=chiste">chiste</a>
+ - <a href="/es/en/translation.asp?spen=chufla">chufla</a>
+ - <a href="/es/en/translation.asp?spen=chusco">chusco</a>
+ - <a href="/es/en/translation.asp?spen=comedia">comedia</a>
+ - <a href="/es/en/translation.asp?spen=c%C3%B3mico">c&#243;mico</a>
+ - <a href="/es/en/translation.asp?spen=con%20chispa">con chispa</a>
+ - <a href="/es/en/translation.asp?spen=cuchufleta">cuchufleta</a>
+ - <a href="/es/en/translation.asp?spen=delirante">delirante</a>
+ - <a href="/es/en/translation.asp?spen=desternillante">desternillante</a>
+ - <a href="/es/en/translation.asp?spen=divertido">divertido</a>
+ - <a href="/es/en/translation.asp?spen=donaire">donaire</a>
+ - <a href="/es/en/translation.asp?spen=faceto">faceto</a>
+ - <a href="/es/en/translation.asp?spen=genial">genial</a>
+ - <a href="/es/en/translation.asp?spen=grotesco">grotesco</a>
+ - <a href="/es/en/translation.asp?spen=jocoso">jocoso</a>
+ - <a href="/es/en/translation.asp?spen=lucido">lucido</a>
+ - <a href="/es/en/translation.asp?spen=monada">monada</a>
+ - <a href="/es/en/translation.asp?spen=moner%C3%ADa">moner&#237;a</a>
+ - <a href="/es/en/translation.asp?spen=mono">mono</a>
+ - <a href="/es/en/translation.asp?spen=musara%C3%B1a">musara&#241;a</a>
+ - <a href="/es/en/translation.asp?spen=ocurrente">ocurrente</a>
+ - <a href="/es/en/translation.asp?spen=qu%C3%A9%20risa">qu&#233; risa</a>
+ - <a href="/es/en/translation.asp?spen=rico">rico</a>
+ - <a href="/es/en/translation.asp?spen=sacarle%20las%20l%C3%A1grimas%20de%20la%20risa">sacarle las l&#225;grimas de la risa</a>
+ - <a href="/es/en/translation.asp?spen=salado">salado</a>
+ - <a href="/es/en/translation.asp?spen=ser%20la%20monda">ser la monda</a>
 </div>
 <div id='FTintro'></div>
 <div class='FTsource'>
 English:</div>
 <div class='FTlist'>
-<a href="/es/translation.asp?tranword=American+Red+Cross">American Red Cross</a>
- - <a href="/es/translation.asp?tranword=ARC">ARC</a>
- - <a href="/es/translation.asp?tranword=blood+orange">blood orange</a>
- - <a href="/es/translation.asp?tranword=cause+for+alarm">cause for alarm</a>
- - <a href="/es/translation.asp?tranword=cayenne">cayenne</a>
- - <a href="/es/translation.asp?tranword=coast+redwood">coast redwood</a>
- - <a href="/es/translation.asp?tranword=commie">commie</a>
- - <a href="/es/translation.asp?tranword=copper+beech">copper beech</a>
- - <a href="/es/translation.asp?tranword=danger+sign">danger sign</a>
- - <a href="/es/translation.asp?tranword=fire+ant">fire ant</a>
- - <a href="/es/translation.asp?tranword=flag">flag</a>
- - <a href="/es/translation.asp?tranword=left-winger">left-winger</a>
- - <a href="/es/translation.asp?tranword=loganberry">loganberry</a>
- - <a href="/es/translation.asp?tranword=madder">madder</a>
- - <a href="/es/translation.asp?tranword=muskellunge">muskellunge</a>
- - <a href="/es/translation.asp?tranword=pinko">pinko</a>
- - <a href="/es/translation.asp?tranword=radicchio">radicchio</a>
- - <a href="/es/translation.asp?tranword=red">red</a>
- - <a href="/es/translation.asp?tranword=red+alert">red alert</a>
- - <a href="/es/translation.asp?tranword=red+ant">red ant</a>
- - <a href="/es/translation.asp?tranword=red+bream">red bream</a>
- - <a href="/es/translation.asp?tranword=red+card">red card</a>
- - <a href="/es/translation.asp?tranword=red+carpet">red carpet</a>
- - <a href="/es/translation.asp?tranword=red+carpet+treatment">red carpet treatment</a>
- - <a href="/es/translation.asp?tranword=red+clay">red clay</a>
- - <a href="/es/translation.asp?tranword=Red+Cross">Red Cross</a>
- - <a href="/es/translation.asp?tranword=red+currant">red currant</a>
- - <a href="/es/translation.asp?tranword=red+drum">red drum</a>
- - <a href="/es/translation.asp?tranword=red+dwarf">red dwarf</a>
- - <a href="/es/translation.asp?tranword=red+flag">red flag</a>
- - <a href="/es/translation.asp?tranword=red+giant">red giant</a>
- - <a href="/es/translation.asp?tranword=red+hat">red hat</a>
- - <a href="/es/translation.asp?tranword=Red+Indian">Red Indian</a>
- - <a href="/es/translation.asp?tranword=red+kidney+bean">red kidney bean</a>
- - <a href="/es/translation.asp?tranword=red+laver">red laver</a>
- - <a href="/es/translation.asp?tranword=red+light">red light</a>
- - <a href="/es/translation.asp?tranword=red+line">red line</a>
- - <a href="/es/translation.asp?tranword=red+meat">red meat</a>
- - <a href="/es/translation.asp?tranword=red+nose">red nose</a>
- - <a href="/es/translation.asp?tranword=red+onion">red onion</a>
- - <a href="/es/translation.asp?tranword=Red+Riding+Hood">Red Riding Hood</a>
- - <a href="/es/translation.asp?tranword=red+rose">red rose</a>
- - <a href="/es/translation.asp?tranword=Red+Square">Red Square</a>
- - <a href="/es/translation.asp?tranword=red+squirrel">red squirrel</a>
- - <a href="/es/translation.asp?tranword=red+star">red star</a>
- - <a href="/es/translation.asp?tranword=red+Swiss+chard">red Swiss chard</a>
- - <a href="/es/translation.asp?tranword=red+tide">red tide</a>
- - <a href="/es/translation.asp?tranword=red+valerian">red valerian</a>
- - <a href="/es/translation.asp?tranword=red-cockaded+woodpecker">red-cockaded woodpecker</a>
- - <a href="/es/translation.asp?tranword=red-light+district">red-light district</a>
+<a href="/es/translation.asp?tranword=cute">cute</a>
+ - <a href="/es/translation.asp?tranword=droll">droll</a>
+ - <a href="/es/translation.asp?tranword=facetious">facetious</a>
+ - <a href="/es/translation.asp?tranword=funny">funny</a>
+ - <a href="/es/translation.asp?tranword=hoot">hoot</a>
+ - <a href="/es/translation.asp?tranword=howl">howl</a>
+ - <a href="/es/translation.asp?tranword=rich">rich</a>
+ - <a href="/es/translation.asp?tranword=waggish">waggish</a>
+ - <a href="/es/translation.asp?tranword=wit">wit</a>
+ - <a href="/es/translation.asp?tranword=amusing">amusing</a>
+ - <a href="/es/translation.asp?tranword=jocular">jocular</a>
+ - <a href="/es/translation.asp?tranword=ridiculous">ridiculous</a>
+ - <a href="/es/translation.asp?tranword=wag">wag</a>
+ - <a href="/es/translation.asp?tranword=barrel+of+laughs">barrel of laughs</a>
+ - <a href="/es/translation.asp?tranword=clown+around">clown around</a>
+ - <a href="/es/translation.asp?tranword=comedian">comedian</a>
+ - <a href="/es/translation.asp?tranword=comical">comical</a>
+ - <a href="/es/translation.asp?tranword=funny+thing">funny thing</a>
+ - <a href="/es/translation.asp?tranword=humorous">humorous</a>
+ - <a href="/es/translation.asp?tranword=hysterical">hysterical</a>
+ - <a href="/es/translation.asp?tranword=hysterically+funny">hysterically funny</a>
+ - <a href="/es/translation.asp?tranword=limerick">limerick</a>
+ - <a href="/es/translation.asp?tranword=screamer">screamer</a>
+ - <a href="/es/translation.asp?tranword=uproarious">uproarious</a>
+ - <a href="/es/translation.asp?tranword=wisecracking">wisecracking</a>
 </div><br />
 
 
@@ -1382,54 +1389,54 @@ English:</div>
 
 
     
-<br><p id='threadsHeader' title='Forum discussions with the word(s) "roja" in the title'>Forum discussions with the word(s) "roja" in the title:</p><div id="lista_link"><a href='https://forum.wordreference.com/threads/a-la-carta-roja-se-le-pone-un-clip-rojo.2377046/'>A la carta roja se le pone un clip rojo.</a><br>
-<a href='https://forum.wordreference.com/threads/agua-roja.893418/'>agua roja</a><br>
-<a href='https://forum.wordreference.com/threads/alarma-roja.639171/'>alarma roja</a><br>
-<a href='https://forum.wordreference.com/threads/alarma-roja.3510395/'>Alarma roja</a><br>
-<a href='https://forum.wordreference.com/threads/alerta-roja.1249750/'>Alerta roja</a><br>
-<a href='https://forum.wordreference.com/threads/alfombra-roja.11264/'>alfombra roja</a><br>
-<a href='https://forum.wordreference.com/threads/antes-una-espa%C3%B1a-roja-que-una-espa%C3%B1a-rota.3454021/'>Antes una Espa&#241;a roja que una Espa&#241;a rota.</a><br>
-<a href='https://forum.wordreference.com/threads/antro-lugar-nocturno-en-zona-roja.476418/'>Antro (lugar nocturno en zona roja)</a><br>
-<a href='https://forum.wordreference.com/threads/aparencia-roja-oscuro-a.1228856/'>aparencia roja oscuro(a)</a> - grammar<br>
-<a href='https://forum.wordreference.com/threads/arcilla-roja.3088101/'>arcilla roja</a><br>
-<a href='https://forum.wordreference.com/threads/bandera-roja-bandera-de-rojo.3739267/'>bandera roja / bandera de rojo</a> - grammar<br>
-<a href='https://forum.wordreference.com/threads/caperucita-roja.284461/'>caperucita roja</a><br>
-<a href='https://forum.wordreference.com/threads/caperucita-roja-capitalized.1808046/'>Caperucita Roja - capitalized?</a> - grammar<br>
-<a href='https://forum.wordreference.com/threads/carne-roja.707380/'>carne roja</a><br>
-<a href='https://forum.wordreference.com/threads/cifra-roja.1053026/'>cifra roja</a><br>
-<a href='https://forum.wordreference.com/threads/coches-cama-roja-o-rojos.976287/'>coches cama roja (o rojos?)</a><br>
-<a href='https://forum.wordreference.com/threads/comida-roja.1956003/'>comida roja</a><br>
-<a href='https://forum.wordreference.com/threads/corrosion-blanca-y-roja.1437335/'>Corrosion blanca y roja</a><br>
-<a href='https://forum.wordreference.com/threads/cota-roja.592094/'>Cota roja</a><br>
-<a href='https://forum.wordreference.com/threads/credencial-roja-ascendente.2794503/'>Credencial Roja Ascendente</a><br>
-<a href='https://forum.wordreference.com/threads/cr%C3%B3nica-roja.1228091/'>cr&#243;nica roja</a><br>
-<a href='https://forum.wordreference.com/threads/cr%C3%B3nica-roja.2206406/'>cr&#243;nica roja</a><br>
-<a href='https://forum.wordreference.com/threads/cruz-roja-marine-sciences.676663/'>Cruz Roja + Marine Sciences</a><br>
-<a href='https://forum.wordreference.com/threads/cruz-roja-festej%C3%B3-100-a%C3%B1os-de-creada.2044965/'>Cruz Roja festej&#243; 100 a&#241;os de creada</a><br>
-<a href='https://forum.wordreference.com/threads/cuando-ves-una-luz-roja.812209/'>Cuando ves una luz roja...</a><br>
-<a href='https://forum.wordreference.com/threads/de-blusa-roja.879202/'>de blusa roja</a><br>
-<a href='https://forum.wordreference.com/threads/de-blusa-roja-o-con-blusa-roja.2521344/'>de blusa roja o con blusa roja</a> - grammar<br>
-<a href='https://forum.wordreference.com/threads/de-caprichosa-a-ves-roja.263113/'>De caprichosa a ves roja</a><br>
-<a href='https://forum.wordreference.com/threads/de-la-pasarela-a-la-alfombra-roja.1208819/'>de la pasarela a la alfombra roja</a><br>
-<a href='https://forum.wordreference.com/threads/debi%C3%B3-haberse-puesto-furiosa-porque-est%C3%A1-roja.2378332/'>debi&#243; haberse puesto furiosa porque est&#225; roja</a><br>
-<a href="?forumtitles=1&amp;spen=roja" title='more...'><strong>more...</strong></a><div class='extra_links'><a href='https://forum.wordreference.com/forums/83/' title="Visit the Spanish-English Forum">Visit the Spanish-English Forum.</a><br /><a href='https://forum.wordreference.com/forums/83/' title="Ask in the forums yourself">Help WordReference: Ask in the forums yourself.</a></div></div> <!-- End lista_link --><div id='extra_links'><a href='/definicion/roja#threadsHeader'><span class='boxed last' title='Discussions in the monolingual forum'>Discussions about 'roja' in the Sólo Español forum</span></a></div>
+<br><p id='threadsHeader' title='Forum discussions with the word(s) "gracioso" in the title'>Forum discussions with the word(s) "gracioso" in the title:</p><div id="lista_link"><a href='https://forum.wordreference.com/threads/andar-gracioso-al-m%C3%A1s-cl%C3%A1sico-estilo-de-los-andares-graciosos.2725170/'>andar gracioso al m&#225;s cl&#225;sico estilo de los andares graciosos</a><br>
+<a href='https://forum.wordreference.com/threads/bonico-guapo-gracioso.1316842/'>bonico - guapo - gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/cachondo-mental-gracioso.236533/'>cachondo mental / gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/chistoso-gracioso.524016/'>Chistoso/Gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/desgracioso-como-ant%C3%B3nimo-de-gracioso.110285/'>Desgracioso - como ant&#243;nimo de gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/era-gracioso-ver-en-la-canastilla-el-mont%C3%B3n-de-lana-encrespa.2574382/'>era gracioso ver en la canastilla el mont&#243;n de lana encrespa</a><br>
+<a href='https://forum.wordreference.com/threads/es-gracioso-algo-como-curioso.743183/'>es gracioso (algo, como curioso)</a><br>
+<a href='https://forum.wordreference.com/threads/es-gracioso-que-modo.2252405/'>es gracioso que + modo ?</a> - grammar<br>
+<a href='https://forum.wordreference.com/threads/es-gracioso-anoche-practiqu%C3%A9-lo-que-iba-a-decirle.2380380/'>Es gracioso; anoche practiqu&#233; lo que iba a decirle</a><br>
+<a href='https://forum.wordreference.com/threads/estubiste-estuviste-gracioso.518747/'>estubiste / estuviste gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/fue-muy-comico-humiristico-humor%C3%ADstico-gracioso.1431988/'>fue muy comico / humiristico [humor&#237;stico] / gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/fue-un-momento-gracioso.3686490/'>Fue un momento gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/gracioso-pronunciation-th-s.193555/'>gracioso (Pronunciation th/s)</a> - grammar<br>
+<a href='https://forum.wordreference.com/threads/gracioso-como-tener-elegancia.2740632/'>gracioso como &quot;tener elegancia&quot;</a><br>
+<a href='https://forum.wordreference.com/threads/gracioso-v-comico.945178/'>Gracioso v. Comico</a><br>
+<a href='https://forum.wordreference.com/threads/gracioso-y-divertido.2783837/'>Gracioso y divertido</a><br>
+<a href='https://forum.wordreference.com/threads/gracioso-e-%C3%ADsimo.432031/'>gracioso&#39; e &#39;&#237;simo&#39;</a><br>
+<a href='https://forum.wordreference.com/threads/hacerse-el-gracioso.74640/'>hacerse el gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/hacerse-el-gracioso.74653/'>hacerse el gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/hacerse-el-gracioso.772607/'>hacerse el gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/hasta-ser%C3%ADa-gracioso.2186634/'>hasta ser&#237;a gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/lo-gracioso-de-la-cuestion-cuesti%C3%B3n.3598928/'>Lo gracioso de la cuestion [cuesti&#243;n]</a><br>
+<a href='https://forum.wordreference.com/threads/m%C3%A1s-vale-caer-en-gracia-que-ser-gracioso.825997/'>m&#225;s vale caer en gracia que ser gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/mono-bonito-gracioso.265744/'>mono, bonito, gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/papel-de-gracioso.176283/'>papel de gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/%C2%A1pero-qu%C3%A9-gracioso.3638911/'>&#161;Pero qu&#233; gracioso...!</a><br>
+<a href='https://forum.wordreference.com/threads/persona-simp%C3%A1tica-gracioso-a-un-buen-amigo.1559582/'>persona simp&#225;tica, gracioso/a, un buen amigo</a> - grammar<br>
+<a href='https://forum.wordreference.com/threads/qu%C3%A9-gracioso.828396/'>qu&#233; gracioso</a><br>
+<a href='https://forum.wordreference.com/threads/que-gracioso-no-entiendo-por-que-quiere-ese-telefono-del-demonio.1594081/'>que gracioso!! (No entiendo por que quiere ese telefono del demonio)</a><br>
+<a href='https://forum.wordreference.com/threads/qu%C3%A9-gracioso.695617/'>qu&#233; gracioso...</a><br>
+<a href="?forumtitles=1&amp;spen=gracioso" title='more...'><strong>more...</strong></a><div class='extra_links'><a href='https://forum.wordreference.com/forums/83/' title="Visit the Spanish-English Forum">Visit the Spanish-English Forum.</a><br /><a href='https://forum.wordreference.com/forums/83/' title="Ask in the forums yourself">Help WordReference: Ask in the forums yourself.</a></div></div> <!-- End lista_link --><div id='extra_links'><a href='/definicion/gracioso#threadsHeader'><span class='boxed last' title='Discussions in the monolingual forum'>Discussions about 'gracioso' in the Sólo Español forum</span></a></div>
 
 
 
         
 
-                <span style="border: 0 none;" id="gtrans" dir="auto"><a href="#" rel="nofollow" title="See Google Translate's machine translation of 'roja'." onclick="iframeGGapi(); return false">See Google Translate's machine translation of 'roja'.</a><br></span>
+                <span style="border: 0 none;" id="gtrans" dir="auto"><a href="#" rel="nofollow" title="See Google Translate's machine translation of 'gracioso'." onclick="iframeGGapi(); return false">See Google Translate's machine translation of 'gracioso'.</a><br></span>
                 <script type="text/javascript">
                     function iframeGGapi() {
-                        var sOriginal = 'roja';
+                        var sOriginal = 'gracioso';
                         var DestLang = "en";
                         var SourceLang = "es";
                         document.getElementById('gtrans').innerHTML = "<iframe style='border: 0 none;' src='/dictionary/googTranslate?dict=" + SourceLang + DestLang + "&w=" + sOriginal + "&sk=t' width='100%' height='55'><\/iframe>";
                     }
                 </script>
 
-        <p class='other_languages'><span title='In other languages:'>In other languages:</span> <a href='/esfr/roja'  title='French'>French</a> | <a href='/espt/roja'  title='Portuguese'>Portuguese</a> | <a href='/esit/roja'  title='Italian'>Italian</a> | <a href='/esde/roja'  title='German'>German</a> | <a href='/esnl/roja' rel='nofollow' title='Dutch'>Dutch</a> | <a href='/essv/roja' rel='nofollow' title='Swedish'>Swedish</a> | <a href='/espl/roja' rel='nofollow' title='Polish'>Polish</a> | <a href='/esro/roja' rel='nofollow' title='Romanian'>Romanian</a> | <a href='/escz/roja' rel='nofollow' title='Czech'>Czech</a> | <a href='/esgr/roja' rel='nofollow' title='Greek'>Greek</a> | <a href='/estr/roja' rel='nofollow' title='Turkish'>Turkish</a> | <a href='/eszh/roja' rel='nofollow' title='Chinese'>Chinese</a> | <a href='/esja/roja' rel='nofollow' title='Japanese'>Japanese</a> | <a href='/esko/roja' rel='nofollow' title='Korean'>Korean</a> | <a href='/esar/roja' rel='nofollow' title='Arabic'>Arabic</a> </p>
-    
+            <p class='other_languages'><span title='In other languages:'>In other languages:</span> <a href='/esfr/gracioso'  title='French'>French</a> | <a href='/espt/gracioso'  title='Portuguese'>Portuguese</a> | <a href='/esit/gracioso'  title='Italian'>Italian</a> | <a href='/esde/gracioso'  title='German'>German</a> | <a href='/esnl/gracioso' rel='nofollow' title='Dutch'>Dutch</a> | <a href='/essv/gracioso' rel='nofollow' title='Swedish'>Swedish</a> | <a href='/espl/gracioso' rel='nofollow' title='Polish'>Polish</a> | <a href='/esro/gracioso' rel='nofollow' title='Romanian'>Romanian</a> | <a href='/escz/gracioso' rel='nofollow' title='Czech'>Czech</a> | <a href='/esgr/gracioso' rel='nofollow' title='Greek'>Greek</a> | <a href='/estr/gracioso' rel='nofollow' title='Turkish'>Turkish</a> | <a href='/eszh/gracioso' rel='nofollow' title='Chinese'>Chinese</a> | <a href='/esja/gracioso' rel='nofollow' title='Japanese'>Japanese</a> | <a href='/esko/gracioso' rel='nofollow' title='Korean'>Korean</a> | <a href='/esar/gracioso' rel='nofollow' title='Arabic'>Arabic</a> </p>
+        
 
 
 <div id="postLinks">
@@ -1637,6 +1644,7 @@ English:</div>
 
 
 
+
 <script type="text/javascript">
 	window.onresize= function(){
 			return moveWHLinks();
@@ -1749,8 +1757,8 @@ English:</div>
         "@type": "ListItem",
         "position": 2,
         "item": {
-        "@id": "//www.wordreference.com/es/en/translation.asp?spen=roja",
-        "name": "roja"
+        "@id": "//www.wordreference.com/es/en/translation.asp?spen=gracioso",
+        "name": "gracioso"
         }
     }]
 }

@@ -1,6 +1,6 @@
-from numpy import double
 import wordProcessing
 import re
+import unidecode 
 
 def generateBigrams(filename="data.txt"):
     d = {}
@@ -62,7 +62,8 @@ def bigramProbabilityFunction(text, textfile="data.txt"):
     return outputProb
 
 def mostLikelySentence(text, textfile="data.txt"):
-    t = wordProcessing.Sentence(text.lower(),"english")
+    t = unidecode.unidecode(text)
+    t = wordProcessing.Sentence(t.lower(),"english")
     orders = t.orders()
     d = {}
     for txt in orders:

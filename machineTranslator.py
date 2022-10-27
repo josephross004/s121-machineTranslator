@@ -1,6 +1,4 @@
-from tkinter import W
 import requests
-import json
 import dearpygui.dearpygui as dpg
 import wordProcessing
 import re
@@ -15,6 +13,7 @@ def getTranslation(sender,data,user_data):
     lang2 = dpg.get_value(user_data[1])
     word = dpg.get_value(user_data[2])
     if lang1==lang2:
+        word = bigram.mostLikelySentence(word)
         dpg.set_value(user_data[3], word)
     else:
         sentence = ""
@@ -42,24 +41,25 @@ def getTranslation(sender,data,user_data):
                 f.close()
             newText = response.text[response.text.find("<td class=\'ToWrd\' >")+19:response.text.find("<td class=\'ToWrd\' >")+1000]
             w = newText[0:newText.find("<")]
-            if regexp.search(w):
+            print(w)
+            unaccented_string = unidecode.unidecode(w)
+            if regexp.search(unaccented_string):
                 print("matched at index: " + str(regexp.search(w).start()))
                 newText = response.text[response.text.find("<td class=\'ToWrd\' >")+19:response.text.find("<td class=\'ToWrd\' >")+1000]
                 newText = newText[newText.find("<td class=\'ToWrd\' >")+19:newText.find("<td class=\'ToWrd\' >")+500]
                 w = newText[0:newText.find("<")]
+                unaccented_string = unidecode.unidecode(w)
                 try:
-                    unaccented_string = unidecode.unidecode(w)
-                    w = w[:regexp.search(unaccented_string).start()+1]
+                    w = unaccented_string[:regexp.search(unaccented_string).start()+1]
                 except AttributeError:
                     w = " " + w
                 if w[len(w)-1] == "," or w[len(w)-1] == "/" or w[len(w)-1] == "\"":
                     w = w[:len(w)-1]
                 if w[0] == " ":
                     w = w[1:]
-            word1 = wordProcessing.Word(w,lang1)
-            sentence += word1.word + " "
-            sentence += " "
-            sentence = bigram.mostLikelySentence(sentence)
+            sentence += w + " "
+        sentence = bigram.mostLikelySentence(sentence)
+        #print(sentence)
         dpg.set_value(user_data[3], sentence)
 
 dpg.create_context()
@@ -73,6 +73,7 @@ with dpg.window(tag="Primary Window"):
     
 with dpg.font_registry():
     with dpg.font("unifont.ttf", 16) as unifont:
+        dpg.add_font_range(0x0080, 0x00ff)
         dpg.add_font_range(0x0250, 0x02ff)
         dpg.add_font_range(0x1D00, 0x1D7F)
         dpg.add_font_range(0x1D80, 0x1DBF)
