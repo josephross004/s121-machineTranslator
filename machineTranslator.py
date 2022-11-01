@@ -58,7 +58,7 @@ def getTranslation(sender,data,user_data):
                 if w[0] == " ":
                     w = w[1:]
             sentence += w + " "
-        sentence = bigram.mostLikelySentence(sentence)
+        sentence = bigram.mostLikelySentence(sentence, "data-en.txt", lang2.lower())
         #print(sentence)
         dpg.set_value(user_data[3], sentence)
 

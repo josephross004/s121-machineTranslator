@@ -2,14 +2,14 @@ import wordProcessing
 import re
 import unidecode 
 
-def generateBigrams(filename="data.txt"):
+def generateBigrams(filename="data-en.txt", lang="english"):
     d = {}
     s1 = ""
     s2 = ""
     key = ""
     with open (filename, "r", encoding="utf-8") as f:
         for line in f:
-            l = wordProcessing.Sentence(line.lower(), "english")
+            l = wordProcessing.Sentence(unidecode.unidecode(line).lower(), lang)
             l.parseText()
             for i in l.parsedText:
                 if s1 == "":
@@ -28,12 +28,12 @@ def generateBigrams(filename="data.txt"):
                         d[key]=1
         return d
 
-def generateUnigrams(filename="data.txt"):
+def generateUnigrams(filename="data-en.txt", lang="english"):
     d = {}
     key = ""
     with open (filename, "r", encoding="utf-8") as f:
         for line in f:
-            l = wordProcessing.Sentence(line.lower(), "english")
+            l = wordProcessing.Sentence(unidecode.unidecode(line).lower(), lang)
             l.parseText()
             for i in l.parsedText:
                 key = i
@@ -43,15 +43,20 @@ def generateUnigrams(filename="data.txt"):
                     d[key]=1
         return d
 
-def bigramProbabilityFunction(text, textfile="data.txt"):
-    t = wordProcessing.Sentence(text.lower(), "english")
+def bigramProbabilityFunction(text, textfile="data-en.txt", lang="english"):
+    t = wordProcessing.Sentence(text.lower(), lang)
     d = t.bigrams()
     pd = {}
     l = [k for k in d.keys()]
+    if lang == "english":
+        pass
+    elif lang == "spanish":
+        textfile="data-es.txt"
     bd = generateBigrams(textfile)
     ud = generateUnigrams(textfile)
     for bigram in d.keys():
         try:
+            #print(bd[bigram])
             s = (((bd[bigram])/(ud[bigram[:bigram.find(",")]])))
             pd[bigram]=s
         except KeyError:
@@ -61,9 +66,9 @@ def bigramProbabilityFunction(text, textfile="data.txt"):
         outputProb *= pd[key]
     return outputProb
 
-def mostLikelySentence(text, textfile="data.txt"):
+def mostLikelySentence(text, textfile="data-en.txt", lang="english"):
     t = unidecode.unidecode(text)
-    t = wordProcessing.Sentence(t.lower(),"english")
+    t = wordProcessing.Sentence(t.lower(),lang)
     orders = t.orders()
     d = {}
     for txt in orders:
@@ -73,7 +78,7 @@ def mostLikelySentence(text, textfile="data.txt"):
         tx = re.sub("\)","",tx)
         tx = re.sub("\'","",tx)
         #print(tx + str(float(bigramProbabilityFunction(tx))))
-        d[tx] = float(bigramProbabilityFunction(tx))
+        d[tx] = float(bigramProbabilityFunction(tx, "data-en.txt", lang))
     max = ""
     mP = 0
     for key in d.keys():
@@ -83,4 +88,4 @@ def mostLikelySentence(text, textfile="data.txt"):
     return max
 #print(generateBigrams())
 #print(generateUnigrams())
-#print(bigramProbabilityFunction("nothing to do"))
+print(mostLikelySentence("el rojo tomate", "data-en.txt", "spanish"))
